@@ -1,0 +1,50 @@
+
+Combining two class:
+function FailMessage()
+{
+return(
+<div>
+<h1 style={
+{
+textAlign: 'center',
+color:'green'
+}
+}>Congratulation !!! you are Fail the test.<br /></h1>
+</div>
+)
+}
+export default FailMessage
+function PassMessage()
+{
+return(
+<div>
+<h1 style={
+{
+textAlign: 'center',
+color:'green'
+}
+}>Congratulation !!! you are pass the test.<br /></h1>
+</div>
+)
+}
+export default PassMessage
+
+
+
+
+
+import React from 'react';
+import PassMessage from './PassMessage';
+import FailMessage from './FailMessage';
+class App extends React.Component{
+render()
+{
+return(
+<div>
+<PassMessage/>
+<FailMessage/>
+</div>
+);
+}
+}
+export default App;

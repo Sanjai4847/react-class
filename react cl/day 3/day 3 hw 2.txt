@@ -1,0 +1,39 @@
+
+State with label:
+import React from 'react';
+class PassMessage extends React.Component{
+constructor()
+{
+super()
+this.state={
+message:'WELCOME VISITOR'
+}
+}
+changeMessage()
+{
+this.setState({
+message:'you won'
+})
+}
+render()
+{
+return(
+<div style={{paddingTop:"250px",
+backgroundColor:"pink",height:300,marginRight:400,marginLeft:400,border:"2px
+solid black",justifyContent:"space-between" }}>
+<center>
+<h1>{this.state.message}</h1>
+<form>
+<label for="fname">First name:</label><br />
+<input type="text" id="fname" name="fname" /><br />
+<label for="lname">Last name:</label><br />
+<input type="text" id="lname" name="lname" /><br></br>
+<br></br>
+</form>
+<button onClick={()=>this.changeMessage()}>Subscribe</button>
+</center>
+</div>
+);
+}
+}
+export default PassMessage;

@@ -1,0 +1,51 @@
+
+HOC REACT:
+import React from 'react';
+function App()
+{
+const fruits=[
+{id:1,name:"Apple"},
+{id:2,name:"Orange"},
+{id:3,name:"Grape"}
+]
+return (
+<div>
+<ul>
+{
+fruits.map((fruit,index)=>(
+<li key={index} id={index}>{fruit.name}</li>
+))
+}
+</ul>
+</div>
+)
+}
+export default App;
+import React from 'react';
+import StyledButton from './components/StyledButton';
+function App()
+{
+return(
+<div>
+<center><StyledButton style={{
+paddingTop:'50px',
+HOC REACT:
+paddingBottom:'50px',
+paddingLeft:'50px',
+paddingRight:'50px'
+}}>Click</StyledButton></center>
+</div>
+);
+}
+export default App;
+import styled from "styled-components";
+const StyledButton=styled.button
+`
+color:red;
+background-color:green;
+&:hover{
+color:white;
+background-color:lightblue;
+}
+`
+export default StyledButton;
